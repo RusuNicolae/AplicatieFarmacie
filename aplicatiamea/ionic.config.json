@@ -1,0 +1,7 @@
+{
+  "name": "aplicatiamea",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

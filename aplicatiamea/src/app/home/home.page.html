@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-title *ngIf="!isSearchbarOpened "> -->
+     
+    <!-- </ion-title> -->
+    
+    <ion-header>
+        <ion-toolbar>
+          <ion-buttons slot="start">
+            <ion-back-button></ion-back-button>
+          </ion-buttons>
+          
+          <ion-title >
+              <ion-icon name="pulse"></ion-icon>
+              Bun venit!
+              <ion-icon name="pulse"></ion-icon>
+            </ion-title>
+          
+        </ion-toolbar>
+      
+        <ion-toolbar>
+          <ion-title >Poti cauta produsul dorit mai jos:
+
+          </ion-title>
+        </ion-toolbar>
+        
+      </ion-header>
+      
+      <ion-content>
+        
+
+        <ion-header collapse="condense">
+          <ion-toolbar>
+            <ion-title size="large">Bun venit!</ion-title>
+          </ion-toolbar>
+        </ion-header>
+
+
+
+        
+
+      </ion-content>
+      <h1> 
+        <h1>
+        </h1>
+      </h1>
+
+    <ion-searchbar *ngIf="isSearchbarOpened" showCancelButton="true" (search)="onSearch($event)" (ionCancel)="isSearchbarOpened=false"></ion-searchbar>
+      <ion-buttons end> 
+        <button ion-button icon-only *ngIf="!isSearchbarOpened" (click)="isSearchbarOpened=true">
+          <button  class="button button-calm icon-left ion-home">
+            Search 
+          <ion-icon name="search">
+          </ion-icon>
+          </button> 
+        </button>
+      </ion-buttons> 
+  </ion-toolbar>
+  
+</ion-header>
+<ion-buttons left>
+    <!-- left aligned content here -->
+  </ion-buttons>
+<ion-title >
+    
+    <ion-icon name="pulse"></ion-icon>
+    Lista farmacii
+    <ion-icon name="pulse"></ion-icon>
+   
+  </ion-title>
+  <ion-buttons right>
+      <!-- left aligned content here -->
+    </ion-buttons>
+
+<ion-content padding class="bg-image" >
+  
+  <ion-list>  
+    <ion-item *ngFor="let item of listItems"> 
+      {{item.name}}
+    </ion-item>
+  </ion-list>
+  
+</ion-content>
+
+
+
+
